@@ -11,7 +11,7 @@ body {
     color: white;
 }
 
-.form-container {
+.form{
     background-color: #222;
     padding: 40px;
     border-radius: 15px;
@@ -21,7 +21,7 @@ body {
     box-shadow: 0 0 20px rgba(255,255,255,0.1);
 }
 
-.input-field {
+.field {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -30,7 +30,7 @@ body {
     box-sizing: border-box;
 }
 
-.submit-btn {
+.btn {
     padding: 10px 20px;
     border-radius: 8px;
     border: none;
@@ -42,7 +42,7 @@ body {
     margin-top: 10px;
 }
 
-.submit-btn:hover {
+.btn:hover {
     background-color: saddlebrown;
 }
 

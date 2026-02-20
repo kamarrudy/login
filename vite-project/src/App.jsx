@@ -8,7 +8,7 @@ function App() {
     const [password, setPassword] = useState("");
     const [loggedInUser, setLoggedInUser] = useState(null);
 
-    const handleLogin = () => {
+    const LogIn = () => {
         if (username === savedUser.username && password === savedUser.password) {
             setLoggedInUser(username);
             setUsername("");
@@ -20,11 +20,11 @@ function App() {
 
     return (
         <div className="page">
-            <div className="form-container">
+            <div className="form">
                 {loggedInUser ? (
                     <>
                         <Login username={loggedInUser} password={savedUser.password} savedUser={savedUser}/>
-                        <button className="submit-btn" onClick={handleLogout}>Logout</button>
+                        <button className="btn" onClick={LogIn}>Logout</button>
                     </>
                 ) : (
                     <>
@@ -41,11 +41,11 @@ function App() {
                             placeholder="رمز عبور"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="input-field"
+                            className="field"
                         />
                         {(username || password) &&
                             <Login username={username} password={password} savedUser={savedUser}/>}
-                        <button className="submit-btn" onClick={handleLogin}>Login</button>
+                        <button className="submit" onClick={LogIn}>Login</button>
                     </>
                 )}
             </div>
