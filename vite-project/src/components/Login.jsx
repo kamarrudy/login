@@ -4,12 +4,12 @@ function Login({ username, password, savedUser = { username: "admin", password: 
     if (username !== savedUser.username || password !== savedUser.password) {
         return (
             <div>
-                <p className="error-message"></p>
+                <p className="error-message">نام کاربری یا رمز عبور اشتباه است</p>
             </div>
         );
     }
 
-    return <h3 className="success-message"> Welcome {username}</h3>;
+    return <h3 className="success-message">خوش آمدید {username}</h3>;
 }
 
 export default Login;
